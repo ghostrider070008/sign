@@ -33,16 +33,16 @@ block content
 								label Date of Birth
 								.row
 									.col-md-3
-										select(class="form-control col-date" id="dateD")
+										select(class="form-control col-date" id="date_d")
 											- for (let i=1; i<=31; i++)
 												option= i
 									.col-md-4
-										select(class="form-control col-date" id="dateM")
-											- let moth = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-											for nameM in moth
-												option= nameM
+										select(class="form-control col-date" id="date_m")
+											- let moth = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+											for name_m in moth
+												option= name_m
 									.col-md-3
-										select(class="form-control col-date" id="dateY")
+										select(class="form-control col-date" id="date_y")
 											- for (let i=1; i<=118; i++)
 												option= i + 1900
 							div(class="form-group col-md-6")
