@@ -1,0 +1,72 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	.container
+		.row
+			.col-md-2(class="sign_up")
+				h1 Sign up
+			.col-md-10
+				h2 New user?
+				p Use the form below to create your account.
+				form
+					div(class="form-row")
+						div(class="form-group col-md-6")
+							label(for="first_name") First name
+							input(type="text" class="form-control" id="first_name" value="Alice")
+						div(class="form-group col-md-6")
+							label(for="last_name") Last name
+							input(type="text" class="form-control" id="last_name" value="Miller")
+					div(class="form-row")
+						div(class="form-group col-md-6")
+							label(for="nationality") Nationality
+							select(class="form-control" id="nationality")
+								option(selected) American
+								option Russian
+						div(class="form-group col-md-6")
+							label(for="email") E-mail
+							input(type="email" class="form-control" id="email" value="alice.miller@yahoo.com")
+						div(class="form-group col-md-6")
+							label Date of Birth
+							.row
+								.col-md-3
+									select(class="form-control" id="date_d")
+										- for (var i=1; i<=31; i++)
+											option= i
+
+								.col-md-4
+									select(class="form-control" id="date_m")
+										- var moth = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+										- for name_m in moth
+											option= name_m
+
+								.col-md-3
+									select(class="form-control" id="date_y")
+										- for (var i=1; i<=118; i++)
+											option= i + 1900
+
+
+						div(class="form-group col-md-6")
+							label Gender
+							.form-row
+								div(class="custom-control custom-radio")
+									input(type="radio" class="custom-control-input" id="male_radio" name="gender" checked)
+									label(class="custom-control-label" for="male_radio") Male
+								div(class="custom-control custom-radio")
+									input(type="radio" class="custom-control-input" id="female" name="gender" checked)
+									label(class="custom-control-label" for="female") Female
+					div(class="form-row")
+						div(class="form-group col-md-6")
+							label(for="password") Password
+							input(type="password" class="form-control" id="password")
+						div(class="form-group col-md-6")
+							label(for="con_password") Confirm password
+							input(type="password" class="form-control" id="con_password")
+					.form-row
+						div(class="form-group col-md-6")
+							p Have an account?
+								a(href="#")  Login
+						div(class="form-group col-md-6")
+							button(type="submit" class="btn btn-primary") Complete Signup
