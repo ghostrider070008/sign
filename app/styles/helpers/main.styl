@@ -14,6 +14,9 @@
 		right 65.34%
 		top calc(50% - 63px/2 + 120.5px)
 .col-md-10
+	.contain
+		.col-date
+			padding 0
 	padding-left 20px
 	h2
 		margin-top 38.52px
@@ -96,8 +99,12 @@
 		position absolute
 		right 3%
 
-
+@media (min-width: 1200px)
+	.contain
+		width 700px
 @media (max-width 640px)
+	.contain
+		width auto
 	.sign_up
 		height 150px
 		h1
